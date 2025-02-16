@@ -59,3 +59,55 @@
     z-index: 100000;
 }
                                             /* SERVICES SECTION */
+
+.h1Service{
+    font-size: 3.6rem;
+    margin-left: 8vw;
+}
+.servicesContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Space between each service */
+  margin-left: 39vw;
+  margin-top: 0vh;
+}
+
+.serviceItem {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.serviceNumber {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #DB574D; /* Red color for numbers */
+}
+
+.serviceContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceTitleWrapper {
+  display: flex;
+  align-items: center; /* Ensures number and title are in one row */
+  gap: 20px; /* Space between number and title */
+}
+
+.serviceTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  margin: 0; /* Remove any default margin */
+}
+
+.serviceDescription {
+  font-size: 1rem;
+  color: gray;
+  max-width: 600px; /* Limit text width */
+  line-height: 1.5;
+}
+
+                                            /* Display SECTION */
