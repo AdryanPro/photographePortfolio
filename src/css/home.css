@@ -1,3 +1,61 @@
-header{
-    background-color: red;
+                                            /* HEADER SECTION */
+.titleWrapper {
+  position: absolute;
+  top: 14%;
+  left: 8vw;
+  text-align: left;
+  z-index: 2;
 }
+.h1TitleHome {
+  font-size: 9rem;
+  font-weight: bold;
+  color: #DB574D;
+  -webkit-text-stroke: 2px black;
+  margin-bottom: 3vh;
+  text-shadow: 2px 2px 0px black;
+}
+.underTitleHome {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  margin-top: 10px;
+  text-shadow: 1px 1px 0px rgb(82, 82, 82);
+}
+.moveTheWords{
+    margin-left: 6vw;
+}
+
+.fullbodyImgWrapper {
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 50vw; /* Takes up half the screen */
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Stack images vertically */
+  align-items: center; /* Center them horizontally */
+  justify-content: center; /* Keep content centered */
+}
+
+
+.photographeHeaderPic{
+    margin-left: 38vw;
+    margin-top: 11vw;
+    object-fit: cover;
+}
+
+.scrollDownPic {
+  position: absolute;
+  text-align: center;
+  bottom: -33vh;
+  right: 30vw;
+  z-index: -1;
+}
+
+.zoomfFaceWrapper{
+    position: relative;
+    left: 8vw;
+    bottom: 30vh;
+    z-index: 100000;
+}
+                                            /* SERVICES SECTION */
