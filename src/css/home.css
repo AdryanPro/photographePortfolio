@@ -365,3 +365,14 @@
   font-weight: bold;
   color: #DB574D;
 }
+                                            /* Last SECTION */
+.workTogether{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 21vh;
+    gap: 6vw;
+}
+.workTogether h1{
+    font-size: 6rem;
+}

@@ -13,6 +13,7 @@ import exhibition3 from '../assets/home/exhibition3.png'
 import client1 from '../assets/home/client1.png'
 import client2 from '../assets/home/client2.png'
 import client3 from '../assets/home/client3.png'
+import workTogether from '../assets/home/workTogether.png'
 export default function Home() {
     const services = [
         { id: "01", title: "PHOTO SHOOTING", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
@@ -192,9 +193,9 @@ export default function Home() {
         <section className="clients">
       <div className="clients-header">
         <h1>
-          WHAT MY CLIENTS <span className="highlight">Say</span>
+          WHAT MY CLIENTS <span className="red">Say</span>
         </h1>
-        <p>WORKED WITH OVER <span className="highlight">50 CLIENTS</span> AROUND THE WORLD</p>
+        <p>WORKED WITH OVER <span className="red">50 CLIENTS</span> AROUND THE WORLD</p>
         <a href="#workwithme" className="btn-work">Work With Me →</a>
       </div>
 
@@ -215,7 +216,10 @@ export default function Home() {
         ))}
       </div>
     </section>
-    
+    <section className="workTogether">
+        <img src={workTogether} alt="" />
+        <h1>LET'S WORK <br /> <span className='red'>Together</span> </h1>
+    </section>
     </div>
   )
 }
