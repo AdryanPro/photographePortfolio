@@ -1,3 +1,6 @@
+.mainWrapperHome{
+    overflow-x: hidden;
+}
                                             /* HEADER SECTION */
 .titleWrapper {
   position: absolute;
@@ -47,7 +50,7 @@
 .scrollDownPic {
   position: absolute;
   text-align: center;
-  bottom: -33vh;
+  bottom: -29vh;
   right: 30vw;
   z-index: -1;
 }
@@ -111,3 +114,144 @@
 }
 
                                             /* Display SECTION */
+.LatestWork-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    max-width: 90vw;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    margin-top: 6vh;
+}
+.LatestWork-header h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: black;
+}
+.LatestWork{
+    display: flex;
+    gap: 18vw;
+    width: 90vw;
+}
+.WrapperImg1et4{
+    margin-left: 8vw;
+}
+.secondImg{
+    margin-left: 6vw;
+}
+.thirdImg{
+    margin-top: 27vh;
+}
+.forthImg{
+    margin-left: 11vw;
+    margin-top: 27vh;
+}
+.LatestWork img{
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+.LatestWork img:hover{
+    transform: scale(1.3);
+}
+                                            /* EXHIBITIONS SECTION */
+.exhibitions {
+  width: 90%;
+  margin: 50px auto;
+  color: #333;
+}
+
+.exhibitions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.exhibitions-header h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: black;
+}
+
+.red {
+  color: #DB574D; /* Red color for the year */
+}
+
+.view-all {
+  text-decoration: none;
+  color: #DB574D;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.exhibition-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.exhibition-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 30px;
+  gap: 20px;
+}
+
+.exhibition-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.exhibition-details {
+  flex: 1;
+}
+
+.location {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.highlight {
+  color: #DB574D; /* Last word is red */
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #666;
+  max-width: 600px;
+}
+
+.buy-ticket {
+  text-decoration: none;
+  color: #DB574D;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.exhibition-date {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #DB574D;
+}
+
+.month {
+  display: block;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.day {
+  font-size: 2.5rem;
+}
+                                            /* WORK SECTION */

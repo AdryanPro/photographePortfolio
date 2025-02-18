@@ -7,7 +7,9 @@ import LatestWork1 from '../assets/home/LatestWork1.png'
 import LatestWork2 from '../assets/home/LatestWork2.png'
 import LatestWork3 from '../assets/home/LatestWork3.png'
 import LatestWork4 from '../assets/home/LatestWork4.png'
-
+import exhibition1 from '../assets/home/exhibitions1.png'
+import exhibition2 from '../assets/home/exhibition2.png'
+import exhibition3 from '../assets/home/exhibition3.png'
 
 export default function Home() {
     const services = [
@@ -15,6 +17,38 @@ export default function Home() {
         { id: "02", title: "VIDEO EDITING", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
         { id: "03", title: "ART DIRECTION", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }
       ];
+    const exhibitions = [
+  {
+    city: "New York",
+    venue: "Town Hall",
+    year: "2022",
+    title: "INDEPENDENT Beauty",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    date: { month: "Jun", day: "16" },
+    image: exhibition1,
+  },
+  {
+    city: "Berlin",
+    venue: "Kunsthalle",
+    year: "2022",
+    title: "IN HUMANITY WE Trust",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    date: { month: "Mar", day: "02" },
+    image: exhibition2,
+  },
+  {
+    city: "Berlin",
+    venue: "Kunsthalle",
+    year: "2022",
+    title: "BERLIN AT Night",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    date: { month: "Feb", day: "01" },
+    image: exhibition3,
+  },
+];
   return (
     <div className='mainWrapperHome'>
         <header className='headerHome'>
@@ -51,6 +85,14 @@ export default function Home() {
                 </div>
             ))}
         </div>
+
+        {/* <h1 className="displayTilte1displayTilte">LATEST Work</h1> */}
+
+        <div className="LatestWork-header">
+            <h1>EXHIBITIONS<span className="red">'22</span></h1>
+            <a href="#viewall" className="view-all">View All →</a>
+        </div>
+        
         <section className='LatestWork'>
             <div className="WrapperImg1et4">
                 <div className="firstImg">
@@ -59,7 +101,7 @@ export default function Home() {
                     <p className='underImg'>New York</p>
                     <p className='underImg'>Octobre 2021</p>
                 </div>
-                <div className="secondImg">
+                <div className="forthImg">
                     <h4 className='topTitle' >FASHION Week</h4>
                     <img src={LatestWork4} alt="" />
                     <p className='underImg'>New York</p>
@@ -68,20 +110,57 @@ export default function Home() {
             </div>
 
             <div className="WrapperImg2et3">
-                <div className="firstImg">
-                    <h4 className='topTitle' >STYLE & Fashion</h4>
-                    <img src={LatestWork2} />
+                <div className="secondImg">
+                    <h4 className='topTitle' >DANCING IN <br /> BLACK & White</h4>
+                    <img src={LatestWork2} alt="" />
                     <p className='underImg'>New York</p>
                     <p className='underImg'>Octobre 2021</p>
                 </div>
-                <div className="secondImg">
-                    <h4 className='topTitle' >ONE Eye</h4>
-                    <img src={LatestWork3} />
+                <div className="thirdImg">
+                    <h4 className='topTitle' >FASHION Week</h4>
+                    <img src={LatestWork3} alt="" />
                     <p className='underImg'>New York</p>
                     <p className='underImg'>Octobre 2021</p>
                 </div>
             </div>
         </section>
+
+        <section className="exhibitions">
+            <div className="exhibitions-header">
+                <h1>EXHIBITIONS<span className="red">'22</span></h1>
+                <a href="#viewall" className="view-all">
+                View All →
+                </a>
+            </div>
+            <div className="exhibition-list">
+                {exhibitions.map((exhibit, index) => (
+                <div className="exhibition-item" key={index}>
+                    <img src={exhibit.image} alt={exhibit.title} className="exhibition-image" />
+                    <div className="exhibition-details">
+                    <p className="location">
+                        {exhibit.city} — {exhibit.venue} — {exhibit.year}
+                    </p>
+                    <h2 className="title">
+                        {exhibit.title.split(" ").map((word, i) =>
+                        i === exhibit.title.split(" ").length - 1 ? (
+                            <span key={i} className="highlight">{word}</span>
+                        ) : (
+                            `${word} `
+                        )
+                        )}
+                    </h2>
+                    <p className="description">{exhibit.description}</p>
+                    <a href="#buy-ticket" className="buy-ticket">Buy Ticket →</a>
+                    </div>
+                    <div className="exhibition-date">
+                    <span className="month">{exhibit.date.month}</span>
+                    <span className="day">{exhibit.date.day}</span>
+                    </div>
+                </div>
+                ))}
+            </div>
+        </section>
+
     </div>
   )
 }
