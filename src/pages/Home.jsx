@@ -10,7 +10,9 @@ import LatestWork4 from '../assets/home/LatestWork4.png'
 import exhibition1 from '../assets/home/exhibitions1.png'
 import exhibition2 from '../assets/home/exhibition2.png'
 import exhibition3 from '../assets/home/exhibition3.png'
-
+import client1 from '../assets/home/client1.png'
+import client2 from '../assets/home/client2.png'
+import client3 from '../assets/home/client3.png'
 export default function Home() {
     const services = [
         { id: "01", title: "PHOTO SHOOTING", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
@@ -18,37 +20,64 @@ export default function Home() {
         { id: "03", title: "ART DIRECTION", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }
       ];
     const exhibitions = [
-  {
-    city: "New York",
-    venue: "Town Hall",
-    year: "2022",
-    title: "INDEPENDENT Beauty",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    date: { month: "Jun", day: "16" },
-    image: exhibition1,
-  },
-  {
-    city: "Berlin",
-    venue: "Kunsthalle",
-    year: "2022",
-    title: "IN HUMANITY WE Trust",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    date: { month: "Mar", day: "02" },
-    image: exhibition2,
-  },
-  {
-    city: "Berlin",
-    venue: "Kunsthalle",
-    year: "2022",
-    title: "BERLIN AT Night",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    date: { month: "Feb", day: "01" },
-    image: exhibition3,
-  },
-];
+    {
+        city: "New York",
+        venue: "Town Hall",
+        year: "2022",
+        title: "INDEPENDENT Beauty",
+        description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        date: { month: "Jun", day: "16" },
+        image: exhibition1,
+    },
+    {
+        city: "Berlin",
+        venue: "Kunsthalle",
+        year: "2022",
+        title: "IN HUMANITY WE Trust",
+        description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        date: { month: "Mar", day: "02" },
+        image: exhibition2,
+    },
+    {
+        city: "Berlin",
+        venue: "Kunsthalle",
+        year: "2022",
+        title: "BERLIN AT Night",
+        description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        date: { month: "Feb", day: "01" },
+        image: exhibition3,
+    },
+    ];
+    const clients = [
+    {
+        name: "Michelle Lindermann",
+        role: "Photoshoot",
+        feedback: "I Really Enjoyed Working With Jacob",
+        description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra. Laoreet sit amet cursus sit amet dictum sit amet justo.",
+        image: client1,
+    },
+    {
+        name: "Jarvis Jackson",
+        role: "Art Direction",
+        feedback: "I Really Enjoyed Working With Jacob",
+        description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        image: client2,
+    },
+    {
+        name: "Daniela Borg",
+        role: "Video Editing",
+        feedback: "I Really Enjoyed Working With Jacob",
+        description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra.",
+        image: client3,
+    },
+    ];
+
   return (
     <div className='mainWrapperHome'>
         <header className='headerHome'>
@@ -90,7 +119,7 @@ export default function Home() {
 
         <div className="LatestWork-header">
             <h1>EXHIBITIONS<span className="red">'22</span></h1>
-            <a href="#viewall" className="view-all">View All →</a>
+            {/* <a href="#viewall" className="view-all">View All →</a> */}
         </div>
         
         <section className='LatestWork'>
@@ -160,7 +189,33 @@ export default function Home() {
                 ))}
             </div>
         </section>
+        <section className="clients">
+      <div className="clients-header">
+        <h1>
+          WHAT MY CLIENTS <span className="highlight">Say</span>
+        </h1>
+        <p>WORKED WITH OVER <span className="highlight">50 CLIENTS</span> AROUND THE WORLD</p>
+        <a href="#workwithme" className="btn-work">Work With Me →</a>
+      </div>
 
+      <div className="clients-list">
+        {clients.map((clients, index) => (
+          <div className="clients-item" key={index}>
+            <img src={clients.image} alt={clients.name} className="client-image" />
+            <div className="clients-details">
+              <h2 className="feedback">
+                <span className="quote-mark">“</span>{clients.feedback}
+              </h2>
+              <p className="description">{clients.description}</p>
+              <p className="client-info">
+                {clients.name} — <span className="role">{clients.role}</span>
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+    
     </div>
   )
 }
