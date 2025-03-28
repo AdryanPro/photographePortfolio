@@ -2,6 +2,12 @@
     overflow-x: hidden;
 }
                                             /* HEADER SECTION */
+.headerHome{
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .titleWrapper {
   position: absolute;
   top: 14%;
@@ -10,6 +16,9 @@
   z-index: 2;
 }
 .h1TitleHome {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   font-size: 9rem;
   font-weight: bold;
   color: #DB574D;
@@ -19,10 +28,13 @@
 }
 .underTitleHome {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 100;
   color: black;
   margin-top: 10px;
-  text-shadow: 1px 1px 0px rgb(82, 82, 82);
+  margin-left: 18vw;
+  /* text-shadow: 1px 1px 0px rgb(82, 82, 82); */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+  font-family: 'Orbitron', sans-serif;
 }
 .moveTheWords{
     margin-left: 6vw;
@@ -42,38 +54,36 @@
 
 
 .photographeHeaderPic{
+    min-width: 33%;
     margin-left: 38vw;
     margin-top: 11vw;
     object-fit: cover;
 }
 
-.scrollDownPic {
+.scrollDownPic{
   position: absolute;
   text-align: center;
-  bottom: -29vh;
-  right: 30vw;
+  right: 21vw;
   z-index: -1;
+  top: 133vh;
 }
 
 .zoomfFaceWrapper{
-    position: relative;
-    left: 8vw;
-    bottom: 30vh;
-    z-index: 100000;
+  margin-top: 12vh;
 }
                                             /* SERVICES SECTION */
-
 .h1Service{
-    font-size: 3.6rem;
-    margin-left: 8vw;
+  font-size: 3.6rem;
+  margin-left: 8vw;
+  margin-top: 6ch;
 }
 .servicesContainer {
-  width: 80%;
+  max-width: 46vw;
   display: flex;
   flex-direction: column;
   gap: 30px; /* Space between each service */
-  margin-left: 39vw;
-  margin-top: 0vh;
+  margin-left: 17vw;
+  margin-top: 8vh;
 }
 
 .serviceItem {
@@ -112,8 +122,13 @@
   max-width: 600px; /* Limit text width */
   line-height: 1.5;
 }
-
-                                            /* Display SECTION */
+.slightLine{
+  min-width: 600px;
+  max-width: 402px !important;
+  height: 1px;
+  background-color: gray;
+}
+                                            /* Lastest Work SECTION */
 .LatestWork-header{
     display: flex;
     justify-content: space-between;
@@ -131,15 +146,18 @@
 }
 .LatestWork{
     display: flex;
-    gap: 18vw;
-    width: 90vw;
+    justify-content: center;
+    align-items: center;
+    gap: 11vw;
+    max-width: 90vw;
+    margin-right: 6vw;
 }
 .WrapperImg1et4{
     margin-left: 8vw;
 }
-.secondImg{
-    margin-left: 6vw;
-}
+/* .secondImg{
+    margin-left: 3vw;
+} */
 .thirdImg{
     margin-top: 27vh;
 }
@@ -148,14 +166,16 @@
     margin-top: 27vh;
 }
 .LatestWork img{
-    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+    /* transition: transform 0.3s ease-in-out; no margin animation only on the image looks bad */
+    transition: transform 0.4s ease-in-out, margin-block 0.4s ease-in-out;
 }
-.LatestWork img:hover{
-    transform: scale(1.3);
+.fullWrapperImgTxt:hover{
+  transform: scale(1.1) translateY(-2.5vh);
 }
+
                                             /* EXHIBITIONS SECTION */
 .exhibitions {
-  width: 90%;
+  max-width: 90%;
   margin: 9vh auto;
   color: #333;
 }
@@ -164,13 +184,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  max-width: 90%;
 }
 
 .exhibitions-header h1 {
   font-size: 4rem;
   font-weight: bold;
   color: black;
+  padding-left: 9vw;
 }
 
 .red {
@@ -184,9 +205,15 @@
   font-size: 1rem;
 }
 
+.WrappeExhibitionsList{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .exhibition-list {
   display: flex;
   flex-direction: column;
+  min-width: 80%;
   gap: 30px;
 }
 
@@ -322,6 +349,7 @@
   border-bottom: 1px solid #ddd;
   padding-bottom: 11vh;
   padding-top: 11vh;
+  max-width: 66%;
 }
 
 .client-image {
@@ -375,4 +403,101 @@
 }
 .workTogether h1{
     font-size: 6rem;
+}
+
+@media (max-width: 1292px) {
+  .LatestWork{
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 8vh;
+  }
+  .firstImg{
+    margin: 0;
+    margin-bottom: 16vh;
+    margin-left: 3vw;
+    background-size: contain;
+  }
+  .forthImg{
+    margin: 0;
+    margin-top: 30vh;
+  }
+  .secondImg{
+    margin-top: 18vh;
+  }
+  .WrapperImg1et4{
+    margin-left: 15vw;
+  }
+  .WrapperImg2et3{
+    margin-left: 15vw;
+  }
+  .LatestWork{
+    margin: 0;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .WrapperImg1et4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+  }
+  .WrapperImg2et3{
+    margin-left: 0;
+  }
+  .forthImg{
+    margin: 0;
+  }
+}
+
+@media (max-width: 870px){
+  .photographeHeaderPic{
+    margin-top: 0;
+  }
+  .h1TitleHome{
+    font-size: 3.6rem;
+    margin-top: 8vh;
+  }
+  .underTitleHome{
+    font-size: 1rem;
+    margin: 0;
+    margin-left: 24vw;
+  }
+  .zoomfFaceWrapper{
+    display: none;
+  }
+  .serviceTitle{
+    min-width: 280px;
+  }
+  .serviceDescription{
+    min-width: 300px;
+  }
+  .slightLine{
+    min-width: 300px;
+  }
+  .LatestWork{
+    margin: 0;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .WrapperImg1et4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+  }
+  .WrapperImg2et3{
+    margin-left: 0;
+  }
+  .forthImg{
+    margin: 0;
+  }
 }

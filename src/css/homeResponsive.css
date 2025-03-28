@@ -1,0 +1,34 @@
+/* @media (min-width: 2560px) and (max-width: 3000px) {
+    .h1TitleHome{
+        font-size: 11rem;
+    }
+    .photographeHeaderPic{
+      width: 32vw;
+    }
+    .scrollDownPic{
+      top: 96vh;
+      right: 33vw;
+    }
+    .LatestWork{
+      gap: 9vw;
+  }
+    .WrapperImg1et4{
+      margin-left: 8vw;
+      min-width: 44vw;
+  }
+  .WrapperImg2et3{
+    min-width: 44vw;
+  }
+  .img1{
+    min-width: 34vw;
+  }
+  .img2{
+    min-width: 21vw;
+  }
+  .img3{
+    min-width: 19vw;
+  }
+  .img4{
+    min-width: 19vw;
+  }
+  } */

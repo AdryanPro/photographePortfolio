@@ -1,5 +1,6 @@
 import React from 'react'
 import "../css/home.css"
+import "../css/homeResponsive.css"
 import photographeHeader from '../assets/home/portfolioHeaderImg.png'
 import zoomOnFace from '../assets/home/zoomOnFace.png'
 import scrollDown from '../assets/home/scrollDown.png'
@@ -91,13 +92,14 @@ export default function Home() {
                     PHOTOGRAPHER <br />
                     <span className='moveTheWords'></span> & VISUAL ARTIST
                 </h2>
+
+                <div className="zoomfFaceWrapper">
+                    <img src={zoomOnFace} alt="" />
+                </div>
             </div>
             <div className='fullbodyImgWrappe'>
                 <img className='photographeHeaderPic' src={photographeHeader} alt="" />
-                <img className='scrollDownPic' src={scrollDown} alt="" />
-            </div>
-            <div className="zoomfFaceWrapper">
-                <img src={zoomOnFace} alt="" />
+                {/* <img className='scrollDownPic' src={scrollDown} alt="" /> */}
             </div>
         </header>
         
@@ -112,43 +114,42 @@ export default function Home() {
                     <h3 className="serviceTitle">{service.title}</h3>
                 </div>
                 <p className="serviceDescription">{service.description}</p>
+                <span className='slightLine'></span>
                 </div>
             ))}
         </div>
 
-        {/* <h1 className="displayTilte1displayTilte">LATEST Work</h1> */}
 
         <div className="LatestWork-header">
-            <h1>EXHIBITIONS<span className="red">'22</span></h1>
-            {/* <a href="#viewall" className="view-all">View All →</a> */}
+            <h1>LATEST <span className="red">WORK</span></h1>
         </div>
         
         <section className='LatestWork'>
             <div className="WrapperImg1et4">
-                <div className="firstImg">
-                    <h4 className='topTitle' >DANCING IN <br /> BLACK & White</h4>
-                    <img src={LatestWork1} alt="" />
+                <div className="firstImg fullWrapperImgTxt">
+                    <h4 className='topTitle' >DANCING IN <br /> BLACK & <span className="red">White</span></h4>
+                    <img src={LatestWork1} alt="" className='img1'/>
                     <p className='underImg'>New York</p>
                     <p className='underImg'>Octobre 2021</p>
                 </div>
-                <div className="forthImg">
-                    <h4 className='topTitle' >FASHION Week</h4>
-                    <img src={LatestWork4} alt="" />
+                <div className="forthImg fullWrapperImgTxt">
+                    <h4 className='topTitle' >FASHION <span className="red">Week</span></h4>
+                    <img src={LatestWork4} alt="" className='img4' />
                     <p className='underImg'>New York</p>
                     <p className='underImg'>Octobre 2021</p>
                 </div>
             </div>
 
             <div className="WrapperImg2et3">
-                <div className="secondImg">
-                    <h4 className='topTitle' >DANCING IN <br /> BLACK & White</h4>
-                    <img src={LatestWork2} alt="" />
+                <div className="secondImg fullWrapperImgTxt">
+                    <h4 className='topTitle' >STYLE <span className="red">& Fashion</span></h4>
+                    <img src={LatestWork2} alt="" className='img2'/>
                     <p className='underImg'>New York</p>
                     <p className='underImg'>Octobre 2021</p>
                 </div>
-                <div className="thirdImg">
-                    <h4 className='topTitle' >FASHION Week</h4>
-                    <img src={LatestWork3} alt="" />
+                <div className="thirdImg fullWrapperImgTxt">
+                    <h4 className='topTitle' >ONE <span className="red">Eye</span></h4>
+                    <img src={LatestWork3} alt="" className='img3'/>
                     <p className='underImg'>New York</p>
                     <p className='underImg'>Octobre 2021</p>
                 </div>
@@ -162,32 +163,34 @@ export default function Home() {
                 View All →
                 </a>
             </div>
-            <div className="exhibition-list">
-                {exhibitions.map((exhibit, index) => (
-                <div className="exhibition-item" key={index}>
-                    <img src={exhibit.image} alt={exhibit.title} className="exhibition-image" />
-                    <div className="exhibition-details">
-                    <p className="location">
-                        {exhibit.city} — {exhibit.venue} — {exhibit.year}
-                    </p>
-                    <h2 className="title">
-                        {exhibit.title.split(" ").map((word, i) =>
-                        i === exhibit.title.split(" ").length - 1 ? (
-                            <span key={i} className="highlight">{word}</span>
-                        ) : (
-                            `${word} `
-                        )
-                        )}
-                    </h2>
-                    <p className="description">{exhibit.description}</p>
-                    <a href="#buy-ticket" className="buy-ticket">Buy Ticket →</a>
+            <div className="WrappeExhibitionsList">
+                <div className="exhibition-list">
+                    {exhibitions.map((exhibit, index) => (
+                    <div className="exhibition-item" key={index}>
+                        <img src={exhibit.image} alt={exhibit.title} className="exhibition-image" />
+                        <div className="exhibition-details">
+                        <p className="location">
+                            {exhibit.city} — {exhibit.venue} — {exhibit.year}
+                        </p>
+                        <h2 className="title">
+                            {exhibit.title.split(" ").map((word, i) =>
+                            i === exhibit.title.split(" ").length - 1 ? (
+                                <span key={i} className="highlight">{word}</span>
+                            ) : (
+                                `${word} `
+                            )
+                            )}
+                        </h2>
+                        <p className="description">{exhibit.description}</p>
+                        <a href="#buy-ticket" className="buy-ticket">Buy Ticket →</a>
+                        </div>
+                        <div className="exhibition-date">
+                        <span className="month">{exhibit.date.month}</span>
+                        <span className="day">{exhibit.date.day}</span>
+                        </div>
                     </div>
-                    <div className="exhibition-date">
-                    <span className="month">{exhibit.date.month}</span>
-                    <span className="day">{exhibit.date.day}</span>
-                    </div>
+                    ))}
                 </div>
-                ))}
             </div>
         </section>
         <section className="clients">
